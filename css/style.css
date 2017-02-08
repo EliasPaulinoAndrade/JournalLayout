@@ -11,14 +11,13 @@ body{
     position: relative;
     overflow: auto;
 }
-#left, #right{
-    margin-top: 50px;
+.left, .right{
     width: 40%;
 }
-#left{
+.left{
     float:left;
 }
-#right{
+.right{
     float:right;
 }
 .post{
@@ -33,7 +32,7 @@ body{
     position: absolute;
     top: 12.5px;
 }
-#right .postDay{
+.right .postDay{
     right:calc(125% - 9px);
 }
 .day{
@@ -98,7 +97,7 @@ body{
     color:#373759;
     border-top: 2px solid #373759;
 }
-#left .postDay{
+.left .postDay{
     left:calc(125% - 9px);
 }
 .postTop{
@@ -125,47 +124,47 @@ body{
     font-family: UbuntuMono-R;
     line-height: 30px;
 }
-#right .postTop:after{
+.right .postTop:after{
     border-right-style: solid;
     border-right-width: 25px; 
     right: 100%;
 }
-#right .postTop{
+.right .postTop{
     text-align: right;
     padding-right:10px;
 }
-#left .postTop:after{
+.left .postTop:after{
     border-left-style: solid;
     border-left-width: 25px;
     left: 100%;
 }
-#left .postTop{
+.left .postTop{
     text-align: left;
     padding-left: 10px;
 }
-#left .postTop.green:after{
+.left .postTop.green:after{
     border-left-color: #7de380;
 }
-#left .postTop.pink:after{
+.left .postTop.pink:after{
     border-left-color: #f46f9d;
 }
-#left .postTop.purple:after{
+.left .postTop.purple:after{
     border-left-color: #a288d2;
 }
-#left .postTop.blue:after{
+.left .postTop.blue:after{
     border-left-color: #47a1de;
 }
 
-#right .postTop.green:after{
+.right .postTop.green:after{
     border-right-color: #7de380;
 }
-#right .postTop.pink:after{
+.right .postTop.pink:after{
     border-right-color: #f46f9d;
 }
-#right .postTop.purple:after{
+.right .postTop.purple:after{
     border-right-color: #a288d2;
 }
-#right .postTop.blue:after{
+.right .postTop.blue:after{
     border-right-color: #47a1de;
 }
 .postTop:after{
@@ -194,32 +193,23 @@ body{
     font-family: UbuntuMono-R;
     color:#df9122;
 }
-#divisor{
+.divisor{
     position: absolute;
     width:20%;
     left: 40%;
     height: 100%;
+    z-index: -1;
 }
-#divisor:before{
-    content:'';
-    width:50px;
-    display: block;
-    padding-bottom:50px;
-    margin: auto;
-    background: #76647d;
-    border-radius: 100%;
-}
-#divisor:after{
+.divisor:after{
     content:'';
     display: block;
     width:0;
     border-left:3px solid #76647d;
     border-right:3px solid #76647d;
     margin:auto;
-    height:calc(100% - 50px);
+    height:calc(100%);
     background: #76647d;
     border-bottom-left-radius:3px;
-
     border-bottom-right-radius:3px;
 }
 #title{
@@ -229,4 +219,28 @@ body{
     font-family: UbuntuMono-R;
     text-transform: capitalize;
     text-align:center;
+}
+.year{
+    overflow: auto;
+}
+.yearTime{
+    display: block;
+    width: 70px;
+    height: 45px;
+    border-radius: 100%;
+    background: #76647d;
+    left:0;
+    right:0;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 25px;
+    font-weight: bold;
+    font-family: UbuntuMono-R;
+    color: #373759;
+}
+.yearTime:hover{    
+    cursor: pointer;
+    background: #797b8c;
 }
