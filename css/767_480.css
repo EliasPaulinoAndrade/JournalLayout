@@ -59,19 +59,8 @@
     top:0;
     background: #373759;
     color:#797b8c;
+    font-family:UbuntuMono-R;
+    font-weight: bold;
+    position: absolute;
 }
-.postDay > span:before, .postDay > span:after{
-    display: none;
-}
-.postTop.green:after{
-    border-left-color: #7de380;
-}
-.postTop.pink:after{
-    border-left-color: #f46f9d;
-}
-.postTop.purple:after{
-    border-left-color: #a288d2;
-}
-.postTop.blue:after{
-    border-left-color: #47a1de;
-}
+

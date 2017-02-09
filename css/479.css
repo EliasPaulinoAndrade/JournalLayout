@@ -1,11 +1,8 @@
 .middle{
     display: block;
-    width: calc(90% - 10px);
+    width: calc(100% - 20px);
+    margin: auto;
     margin-top:50px;
-    margin-left:10px;
-}
-.post{
-    width: 100%;
 }
 .divisor{
     position: absolute;
@@ -16,31 +13,15 @@
     z-index: -1;
     display: none;
 }
-.year{
-    position: relative;
-}
 #title{
-    position: absolute;
-    left: 10px;
+    text-align: left;
+    padding-left: 10px;
 }
 .yearTime{
     display: none;
 }
 .postTop{
     padding-left: 10px;
-}
-.postTop:after{
-    top:0;
-    content:'';
-    display: block;
-    position: absolute;
-    width:0px;
-    height: 0px;
-    border-bottom: 23px solid transparent;
-    border-top:23px solid transparent;
-    border-left-style: solid;
-    border-left-width: 25px;
-    left: 100%;
 }
 .day{
     display: none;
@@ -58,19 +39,11 @@
     border: 0;
     padding: 0;
     color:#797b8c;
+    font-family:UbuntuMono-R;
+    font-weight: bold;
+    position: absolute;
+    color:#373759;
 }
-.postDay > span:before, .postDay > span:after{
-    display: none;
-}
-.postTop.green:after{
-    display: none;
-}
-.postTop.pink:after{
-    display: none;
-}
-.postTop.purple:after{
-    display: none;
-}
-.postTop.blue:after{
+.postTop:after{
     display: none;
 }

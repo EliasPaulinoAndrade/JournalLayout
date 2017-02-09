@@ -12,6 +12,67 @@
 .right .postDay{
     right:calc(125% - 9px);
 }
+.left .postDay{
+    left:calc(125% - 9px);
+}
+.right .postTop:after{
+    border-right-style: solid;
+    border-right-width: 25px; 
+    right: 100%;
+}
+.right .postTop{
+    text-align: right;
+    padding-right:10px;
+}
+.left .postTop:after{
+    border-left-style: solid;
+    border-left-width: 25px;
+    left: 100%;
+}
+.left .postTop{
+    text-align: left;
+    padding-left: 10px;
+}
 .post{
     width: 100%;
+}
+.postDay > span{
+    display: none;
+    background: #76647d;
+    padding: 5px;
+    top:30px;
+    position: absolute;
+    right: calc(-50% - 8px);
+    font-family:UbuntuMono-R;
+    font-weight: bold;
+    color:#373759;
+    border-top: 2px solid #373759;
+}
+.postDay > span:after{
+    content:'';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom:100%;
+    left:0;
+    right:0;
+    margin: auto;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #76647d;
+}
+.postDay > span:before{
+    content:'';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom:100%;
+    left:0;
+    right:0;
+    margin: auto;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #373759;
 }
