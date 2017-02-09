@@ -329,6 +329,8 @@ body{
 }
 .postEditor{
     padding-bottom:20px;
+    animation-name: postEditorAnim;
+    animation-duration: 1s;
 }
 .postEditor > .postTop > h1{
     outline: 0;
