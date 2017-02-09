@@ -116,6 +116,42 @@ body{
 .postTop.blue{
     background: #47a1de;
 }
+.postTop.green ~ .postEditorOptions > ul > li{
+    background: #7de380;
+}
+.postTop.pink ~ .postEditorOptions > ul > li{
+    background: #f46f9d;
+}
+.postTop.purple ~ .postEditorOptions > ul > li{
+    background: #a288d2;
+}
+.postTop.blue ~ .postEditorOptions > ul > li{
+    background: #47a1de;
+}
+.postTop.green ~ .postEditorOptions > ul > li:hover{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+    ), #7de380;
+}
+.postTop.pink ~ .postEditorOptions > ul > li:hover{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+    ), #f46f9d;
+}
+.postTop.purple ~ .postEditorOptions > ul > li:hover{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+    ), #a288d2;
+}
+.postTop.blue ~ .postEditorOptions > ul > li:hover{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+    ), #47a1de;
+}
 .postTop > h1{
     padding:0;
     margin:0;
@@ -207,10 +243,23 @@ body{
     border-left:3px solid #76647d;
     border-right:3px solid #76647d;
     margin:auto;
-    height:calc(100%);
+    height:calc(100% - 10px);
     background: #76647d;
     border-bottom-left-radius:3px;
     border-bottom-right-radius:3px;
+}
+.divisor:before{
+    content:'';
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #76647d;
+    top:calc(100% - 6px);
+    left:0;
+    right:0;
+    border-radius: 100%;
+    margin: auto;
 }
 #title{
     font-size: 30px;
@@ -239,8 +288,99 @@ body{
     font-weight: bold;
     font-family: UbuntuMono-R;
     color: #373759;
+    transition: all 0.5s;
 }
 .yearTime:hover{    
     cursor: pointer;
     background: #797b8c;
+}
+#menu{
+    position: fixed;
+    right:0;
+    bottom:10px;
+    z-index: 2;
+}
+#menu > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    position: relative;
+    width: 50px;
+}
+#menu > ul > li{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #76647d;
+    display: block;
+    position: absolute;
+    bottom:0;
+    cursor: pointer;
+}
+#menu > ul >li:last-child{
+    background: #986666;
+}
+#menu > ul >li >img{
+    width: 60%;
+    margin: auto;
+    display: block;
+    padding-top: 20%;
+}
+.postEditor{
+    padding-bottom:20px;
+}
+.postEditor > .postTop > h1{
+    outline: 0;
+}
+.postEditor > .postTop > h1[contenteditable=true]:empty::before{
+    content:'Title...';
+    opacity: 0.4;
+}
+.postEditor .postContent{
+    outline: 0;
+}
+.postEditor .postContent[contenteditable=true]:empty:before{
+    content:'Escreva...';
+    opacity: 0.4;
+}
+.postEditorOptions{
+    margin-left:10px;
+}
+.postEditorOptions > ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    overflow: auto;
+}
+.postEditorOptions > ul > li{
+    float: left;
+    display: block;
+    padding:10px;
+    margin-right:10px;
+    border-radius: 5px;
+    font-family:UbuntuMono-R;
+    color:#373759;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    cursor: pointer;
+    height: 20px;
+    overflow: visible;
+    margin-top:10px;
+}
+.postEditorOptions > ul > li:hover >img{
+    transform:scale(1.2);
+    animation-delay: 2s;
+    animation-name: postEditIcon;
+    animation-duration: 0.1s;
+    animation-iteration-count: infinite;
+}
+.postEditorOptions > ul > li > img{
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    vertical-align: middle;
+    transition: all 0.1s;
 }

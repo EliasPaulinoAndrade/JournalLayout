@@ -1,13 +1,27 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/animations.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div id="title">
         daily
     </div>
-    
+    <div id="menu">
+        <ul>
+            <li>
+                <img src="img/perfil.png"/>
+            </li>
+            <li id="newPostEditor">
+                <img src="img/pen.png"/>
+            </li>
+            <li>
+                <img src="img/open.png"/>
+            </li>
+        </ul>
+    </div>
+
     <div id="center">
         <div class="divisor"></div>
         <div class="year">
@@ -15,6 +29,32 @@
                 2012
             </div>
             <div class="left">
+                <div class="post postEditor">
+                    <div class="postTop purple">
+                        <div class="postDay">
+                            <div class="day"></div>
+                            <span>12/09</span>
+                        </div>
+                        <h1 contenteditable="true"></h1>
+                    </div>
+                    <div class="postBody">
+                        <div class="postContent" contenteditable="true"></div>
+                    </div>
+                    <div class="postEditorOptions">
+                        <ul>
+                            <li>
+                                <img src="img/send.png"/>
+                                <span> Postar</span>
+                            </li>
+                             <li>
+                                 <img src="img/cancel.png"/>
+                                 <span> Cancelar</span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="post">
                     <div class="postTop green">
                         <div class="postDay">
@@ -51,23 +91,6 @@
                 </div>
             </div>
             <div class="right">
-                <div class="post">
-                    <div class="postTop pink">
-                        <div class="postDay">
-                            <div class="day"></div>
-                            <span>12/09</span>
-                        </div>
-                        <h1>Title</h1>
-                    </div>
-                    <div class="postBody">
-                        <div class="postContent">
-                                A prática cotidiana prova que a contínua expansão de nossa atividade cumpre um papel essencial na formulação das condições financeiras e administrativas exigidas. 
-                        </div>
-                        <div class="postTime">
-                            12:56
-                        </div>
-                    </div>
-                </div>
                 <div class="post">
                     <div class="postTop purple">
                         <div class="postDay">
@@ -178,27 +201,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="post">
-                    <div class="postTop pink">
-                        <div class="postDay">
-                            <div class="day"></div>
-                            <span>12/09</span>
-                        </div>
-                        <h1>Title</h1>
-                    </div>
-                    <div class="postBody">
-                        <div class="postContent">
-                                Todavia, o início da atividade geral de formação de atitudes deve passar por modificações independentemente das diretrizes de desenvolvimento para o futuro. 
-                        </div>
-                        <div class="postTime">
-                            12:56
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/setMargins.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/editPost.js"></script>
 </body>
 </html>
