@@ -1,0 +1,17 @@
+.left{
+    float:left;
+    display: block;
+}
+.right{
+    float:right;
+    display: block;
+}
+.left, .right{
+    width: 40%;
+}
+.right .postDay{
+    right:calc(125% - 9px);
+}
+.post{
+    width: 100%;
+}

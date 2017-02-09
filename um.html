@@ -2,9 +2,17 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/animations.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    
+	<link rel="stylesheet" type="text/css" href="css/1024.css" media="(min-width: 1024px)">
+	<link rel="stylesheet" type="text/css" href="css/1023_768.css" media="(max-width: 1023px) and (min-width: 768px)">
+	<link rel="stylesheet" type="text/css" href="css/767_480.css" media="(max-width: 767px) and (min-width: 480px)">
+	<link rel="stylesheet" type="text/css" href="css/479.css" media="(max-width: 479px)">
 </head>
 <body>
+    <div id="postPile">
+        
+    </div>
     <div id="title">
         daily
     </div>
@@ -28,33 +36,7 @@
             <div class="yearTime">
                 2012
             </div>
-            <div class="left">
-                <div class="post postEditor">
-                    <div class="postTop purple">
-                        <div class="postDay">
-                            <div class="day"></div>
-                            <span>12/09</span>
-                        </div>
-                        <h1 contenteditable="true"></h1>
-                    </div>
-                    <div class="postBody">
-                        <div class="postContent" contenteditable="true"></div>
-                    </div>
-                    <div class="postEditorOptions">
-                        <ul>
-                            <li>
-                                <img src="img/send.png"/>
-                                <span> Postar</span>
-                            </li>
-                             <li>
-                                 <img src="img/cancel.png"/>
-                                 <span> Cancelar</span>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-
+            <div class="middle">
                 <div class="post">
                     <div class="postTop green">
                         <div class="postDay">
@@ -82,7 +64,7 @@
                     </div>
                     <div class="postBody">
                         <div class="postContent">
-                                 O que temos que ter sempre em mente é que a mobilidade dos capitais internacionais estimula a padronização de todos os recursos funcionais envolvidos
+                                Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas
                         </div>
                         <div class="postTime">
                             12:56
@@ -90,9 +72,9 @@
                     </div>
                 </div>
             </div>
-            <div class="right">
+            <div class="left">
                 <div class="post">
-                    <div class="postTop purple">
+                    <div class="postTop green">
                         <div class="postDay">
                             <div class="day"></div>
                             <span>12/09</span>
@@ -101,13 +83,15 @@
                     </div>
                     <div class="postBody">
                         <div class="postContent">
-                                Evidentemente, a revolução dos costumes auxilia a preparação e a composição do orçamento setorial. 
+                                Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas
                         </div>
                         <div class="postTime">
                             12:56
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="right">
                 <div class="post">
                     <div class="postTop pink">
                         <div class="postDay">
@@ -130,24 +114,8 @@
             <div class="yearTime">
                 2012
             </div>
+            <div class="middle"></div>
             <div class="left">
-                <div class="post">
-                    <div class="postTop green">
-                        <div class="postDay">
-                            <div class="day"></div>
-                            <span>12/09</span>
-                        </div>
-                        <h1>Title</h1>
-                    </div>
-                    <div class="postBody">
-                        <div class="postContent">
-                                Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas Desta maneira, a execução dos pontos do programa oferece uma interessante oportunidade para verificação das condições financeiras e administrativas exigidas
-                        </div>
-                        <div class="postTime">
-                            12:56
-                        </div>
-                    </div>
-                </div>
                 <div class="post">
                     <div class="postTop blue">
                         <div class="postDay">
@@ -184,27 +152,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="post">
-                    <div class="postTop purple">
-                        <div class="postDay">
-                            <div class="day"></div>
-                            <span>12/09</span>
-                        </div>
-                        <h1>Title</h1>
-                    </div>
-                    <div class="postBody">
-                        <div class="postContent">
-                                Evidentemente, a revolução dos costumes auxilia a preparação e a composição do orçamento setorial. 
-                        </div>
-                        <div class="postTime">
-                            12:56
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/postar.js"></script>
     <script src="js/setMargins.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/editPost.js"></script>

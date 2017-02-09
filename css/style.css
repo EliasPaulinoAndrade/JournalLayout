@@ -11,17 +11,16 @@ body{
     position: relative;
     overflow: auto;
 }
-.left, .right{
-    width: 40%;
-}
 .left{
-    float:left;
+    display: none;
 }
 .right{
-    float:right;
+    display: none;
+}
+.middle{
+    display: none;
 }
 .post{
-    width: 100%;
     background: white;
     margin-bottom:10px; 
 }
@@ -31,9 +30,6 @@ body{
     height: 18px;
     position: absolute;
     top: 12.5px;
-}
-.right .postDay{
-    right:calc(125% - 9px);
 }
 .day{
     width: 100%;
@@ -178,29 +174,20 @@ body{
     text-align: left;
     padding-left: 10px;
 }
-.left .postTop.green:after{
+.postTop.green:after{
     border-left-color: #7de380;
-}
-.left .postTop.pink:after{
-    border-left-color: #f46f9d;
-}
-.left .postTop.purple:after{
-    border-left-color: #a288d2;
-}
-.left .postTop.blue:after{
-    border-left-color: #47a1de;
-}
-
-.right .postTop.green:after{
     border-right-color: #7de380;
 }
-.right .postTop.pink:after{
+.postTop.pink:after{
+    border-left-color: #f46f9d;
     border-right-color: #f46f9d;
 }
-.right .postTop.purple:after{
+.postTop.purple:after{
+    border-left-color: #a288d2;
     border-right-color: #a288d2;
 }
-.right .postTop.blue:after{
+.postTop.blue:after{
+    border-left-color: #47a1de;
     border-right-color: #47a1de;
 }
 .postTop:after{
@@ -329,6 +316,8 @@ body{
 }
 .postEditor{
     padding-bottom:20px;
+    animation-name: postEditorAnim;
+    animation-duration: 1s;
 }
 .postEditor > .postTop > h1{
     outline: 0;
@@ -383,4 +372,8 @@ body{
     height: 20px;
     vertical-align: middle;
     transition: all 0.1s;
+    padding-right:10px;
+}
+#postPile{
+    display: none;
 }
