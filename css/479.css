@@ -43,6 +43,8 @@
     font-weight: bold;
     position: absolute;
     color:#373759;
+    font-size: 17px;
+    line-height: 17px;
 }
 .postTop:after{
     display: none;

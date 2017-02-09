@@ -45,7 +45,10 @@
     right: calc(-50% - 8px);
     font-family:UbuntuMono-R;
     font-weight: bold;
+    color:#373759;
     border-top: 2px solid #373759;
+    font-size: 17px;
+    line-height: 17px;
 }
 .postDay > span:after{
     content:'';

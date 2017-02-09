@@ -46,6 +46,8 @@
     font-family:UbuntuMono-R;
     font-weight: bold;
     color:#373759;
+    font-size: 17px;
+    line-height: 17px;
     border-top: 2px solid #373759;
 }
 .postDay > span:after{
@@ -75,4 +77,10 @@
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
     border-bottom: 9px solid #373759;
+}
+.postContent{
+    width: 100%;
+    font-family: UbuntuMono-R;
+    line-height: 15px;
+    font-size:15px;
 }
