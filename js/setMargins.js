@@ -1,9 +1,17 @@
 $(document).ready(function(){
-    //setMargin(postSort($(".post")), 60);
+    movePostsFromPile($(window).width(), 768, "#center");
     setMarginOfYears($(".year"),60);
 });
-window.onresize = function(){
-    //setMargin(postSort(resetMargin($(".post"))), 60);
+window.onresize = function screenResize(){
+    if(screenResize.oldWidth =='undefined')
+        screenResize.oldWidth = $(window).width();
+    var atualWidth = $(window).width();
+    console.log(atualWidth+" "+screenResize.oldWidth);
+    if(atualWidth>768 && screenResize.oldWidth<768)
+        movePostsFromPile($(window).width(), 768, "#center");
+    if(atualWidth<768 && screenResize.oldWidth>768)
+        movePostsFromPile($(window).width(), 768, "#center");
+    screenResize.oldWidth = atualWidth;
     setMarginOfYears($(".year"),60);
 };
 function setMarginOfYears(years, minDistance){

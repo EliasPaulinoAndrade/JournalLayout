@@ -1,7 +1,12 @@
 $("#newPostEditor").click(function(){
     if($(".postEditor").length==0){
-        setOptListeners(addEditPost(createEditPost(selecPostColor()), $(".left").first()));
-        setMarginOfYears($(".year"),60);
+        if($(window).width()<768){
+            setOptListeners(addEditPost(createEditPost(selecPostColor()), $(".middle").first()));
+        }
+        else{
+            setOptListeners(addEditPost(createEditPost(selecPostColor()), $(".left").first()));
+            setMarginOfYears($(".year"),60);
+        }
     }
 });
 function addEditPost(post, local){
