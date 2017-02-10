@@ -201,8 +201,7 @@ body{
     padding-top: 20%;
 }
 .postEditor{
-    animation-name: postEditorAnim;
-    animation-duration: 1s;
+    animation: postEditorAnim 1s, postEditorPulse 0.05s 1s 3;
 }
 .postEditor > .postTop > h1{
     outline: 0;

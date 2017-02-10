@@ -19,7 +19,7 @@ function movePostsToLeftRight(pile, destiny){
         $(year).find(".postContainer").first().find(".post").each(function(indexP, post){
             /*var left = $(year).find(".left");
             var right = $(year).find(".right");*/
-            console.log($(post).height());
+            //console.log($(post).height());
             if(indexP%2==0)
                 $(year).find(".left").append(post);
             else
@@ -31,6 +31,7 @@ function movePostsToLeftRight(pile, destiny){
             else{
                 $(left).append(post);
             }*/
+            //console.log($(year).find(".left").first().height());
         });
         $(year).find(".postContainer").remove();
     }).appendTo(destiny);
