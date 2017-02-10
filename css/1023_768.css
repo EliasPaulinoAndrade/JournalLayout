@@ -84,3 +84,64 @@
     line-height: 15px;
     font-size:15px;
 }
+#title{
+    margin-bottom: 20px; 
+}
+#logo{
+    display: block;
+    margin: auto;
+    width: 50px;
+    margin-top: 20px; 
+}
+.postEditorOptions > ul > li{
+    position: relative;
+}
+#menu > ul > li div{
+    display: block;
+    width: 0;
+    overflow: hidden;
+    height: 0;
+    
+    padding: 0;
+    margin: 0;
+}
+#menu > ul > li:hover  div:before{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background: #76647d;
+    position: absolute;
+    content:'';
+    display: block;
+    top:0;
+    left:-25px;
+    z-index: -1;
+}
+#menu > ul > li span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width:170px;
+    color: #373759;
+}
+#menu > ul > li:hover  div{
+    overflow: visible;
+    font-family:UbuntuMono-R;
+    font-weight:bold; 
+    height: auto;
+    position: absolute;
+    display: block;
+    width: 200px;
+    max-width: 100vw;
+    right: 50%;
+    background: #76647d;
+    top:0;
+    bottom:0;
+    margin: auto;
+    font-size:15px;
+    padding-top: calc(50% - 7.5px); 
+    z-index: -1;
+    animation-name: menuDesc;
+    animation-duration: 2s;
+}

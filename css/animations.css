@@ -9,7 +9,48 @@
     0%{
         opacity: 0;
     }
-    100%{
+    90%{
         opacity: 1;
+    }
+    91%{    
+       transform :rotate(0deg);
+    }
+    92%{    
+       transform :rotate(1deg);
+    }
+    93%{    
+      transform :rotate(0deg);
+    }
+    94%{    
+       transform :rotate(-1deg);
+    }
+    95%{    
+       transform :rotate(0deg);
+    }
+    96%{    
+       transform :rotate(0deg);
+    }
+    97%{    
+       transform :rotate(1deg);
+    }
+    98%{    
+      transform :rotate(0deg);
+    }
+    99%{    
+       transform :rotate(-1deg);
+    }
+    100%{    
+       transform :rotate(0deg);
+    }
+}
+@keyframes menuDesc{
+    0%{
+        width: 0px;
+    }
+    50%{
+        width: 0px;
+    }
+    100%{
+        width: 200px;
     }
 }

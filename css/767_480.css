@@ -65,4 +65,11 @@
     font-size: 17px;
     line-height: 17px;
 }
-
+#logo{
+    margin: auto;
+    width: 50px;
+    margin-top: 20px; 
+}
+#menu > ul > li div{
+    display: none;
+}

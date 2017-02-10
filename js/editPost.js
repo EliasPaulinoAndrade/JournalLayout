@@ -58,8 +58,8 @@ function cretatePostEditorOption(imgUrl, text, classLi){
 }
 function createPostDay(){
     var curDate = new Date();
-    var curDay = curDate.getDay();
-    var curMonth = curDate.getMonth();
+    var curDay = curDate.getDate();
+    var curMonth = curDate.getMonth() + 1;
     var postDay = document.createElement("div");
     var spanText =  curDay>9?curDay: "0"+curDay;
     spanText+="/";

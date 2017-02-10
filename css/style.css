@@ -76,7 +76,7 @@ body{
     border-top:23px solid transparent;
 }
 .postBody{
-    padding: 15px 10px 5px 10px;
+    padding: 15px 10px 10px 10px;
     overflow: auto;
 }
 .postContent{
@@ -84,12 +84,6 @@ body{
     font-family: UbuntuMono-R;
     line-height: 15px;
     font-size:15px;
-}
-.postTime{
-    padding: 15px 0 5px 0;
-    font-size:25px;
-    font-family: UbuntuMono-R;
-    color:#df9122;
 }
 .divisor{
     position: absolute;
@@ -130,6 +124,12 @@ body{
     font-family: UbuntuMono-R;
     text-transform: capitalize;
     text-align:center;
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+    cursor: default;
 }
 .year{
     overflow: auto;
@@ -179,6 +179,17 @@ body{
     position: absolute;
     bottom:0;
     cursor: pointer;
+    box-shadow: 0 0 5px 0.001px #2C2C4D;
+    transition: box-shadow 0.5s;
+}
+#menu > ul > li:hover{
+    box-shadow: none;
+}
+#menu > ul > li:active{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+    ), #76647d;
 }
 #menu > ul >li:last-child{
     background: #986666;
@@ -190,7 +201,6 @@ body{
     padding-top: 20%;
 }
 .postEditor{
-    padding-bottom:20px;
     animation-name: postEditorAnim;
     animation-duration: 1s;
 }
@@ -210,6 +220,7 @@ body{
 }
 .postEditorOptions{
     margin-left:10px;
+    padding-bottom: 10px;
 }
 .postEditorOptions > ul{
     margin:0;
