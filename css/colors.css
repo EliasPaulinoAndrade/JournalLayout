@@ -1,0 +1,64 @@
+.postTop.green{
+    background: #7de380;
+}
+.postTop.pink{
+    background: #f46f9d;
+}
+.postTop.purple{
+    background: #a288d2;
+}
+.postTop.blue{
+    background: #47a1de;
+}
+.postTop.green ~ .postEditorOptions > ul > li{
+    background: #7de380;
+}
+.postTop.pink ~ .postEditorOptions > ul > li{
+    background: #f46f9d;
+}
+.postTop.purple ~ .postEditorOptions > ul > li{
+    background: #a288d2;
+}
+.postTop.blue ~ .postEditorOptions > ul > li{
+    background: #47a1de;
+}
+.postTop.green ~ .postEditorOptions > ul > li:hover{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+    ), #7de380;
+}
+.postTop.pink ~ .postEditorOptions > ul > li:hover{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+    ), #f46f9d;
+}
+.postTop.purple ~ .postEditorOptions > ul > li:hover{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+    ), #a288d2;
+}
+.postTop.blue ~ .postEditorOptions > ul > li:hover{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+    ), #47a1de;
+}
+.postTop.green:after{
+    border-left-color: #7de380;
+    border-right-color: #7de380;
+}
+.postTop.pink:after{
+    border-left-color: #f46f9d;
+    border-right-color: #f46f9d;
+}
+.postTop.purple:after{
+    border-left-color: #a288d2;
+    border-right-color: #a288d2;
+}
+.postTop.blue:after{
+    border-left-color: #47a1de;
+    border-right-color: #47a1de;
+}

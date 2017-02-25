@@ -1,0 +1,93 @@
+.middle{
+    display: block;
+    width: calc(100% - 20px);
+    margin: auto;
+}
+.divisor{
+    position: absolute;
+    width:10%;
+    left: auto;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    display: none;
+}
+#title{
+    text-align: center;
+}
+.yearTime{
+    background: none;
+    color:#76647d;
+    position: relative;
+}
+.yearTime:hover{
+    color:#373759;
+    background: #76647d;
+}
+.yearTime:hover:before, .yearTime:hover:before{
+    display: none;
+}
+.yearTime:before{
+    content:'';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    left:0;
+    right: 0;
+    margin: auto;
+    background: #76647d;
+    position: absolute;
+    top:calc(100% - 5px);
+}
+.yearTime:after{
+    content:'';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    left:0;
+    right: 0;
+    margin: auto;
+    background: #76647d;
+    position: absolute;
+    top:calc(100% - 25px);
+}
+.postTop{
+    padding-left: 10px;
+}
+.day{
+    display: none;
+}
+.postDay{
+    width: 100%;
+}
+.postDay > span{
+    display: block;
+    width: 50px;
+    right:10px;
+    text-align: center;
+    top:0;
+    background: none;
+    border: 0;
+    padding: 0;
+    color:#797b8c;
+    font-family:UbuntuMono-R;
+    font-weight: bold;
+    position: absolute;
+    color:#373759;
+    font-size: 17px;
+    line-height: 17px;
+}
+.postTop:after{
+    display: none;
+}
+#logo{
+    margin: auto;
+    width: 40px;
+    display: block;
+    margin-top: 20px; 
+}
+#menu > ul > li div{
+    display: none;
+}
