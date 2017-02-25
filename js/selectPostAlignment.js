@@ -12,10 +12,54 @@ function movePostsToLeftRight(pile, destiny){
         $(year).append("<div class='left'></div>");
         $(year).append("<div class='right'></div>");
         $(year).find(".post").each(function(indexP, post){
-	    $(insertOnLeftOrRight($(year).find(".left"), $(year).find(".right"))).append(post);
+	        $(insertOnLeftOrRight($(year).find(".left"), $(year).find(".right"))).append(post);
         });
         $(year).find(".postContainer").remove();
     });
+}
+function uploadDestiny(){
+    if(isMiddleSize() && $("#center .middle").length==0)
+        updatePostsFromDestiny($("#postPile"), $("#center"), true);
+    if(!isMiddleSize() && $("#center .middle").length!=0)
+        updatePostsFromDestiny($("#postPile"), $("#center"), false);
+}
+function updatePostsFromDestiny(pile, destiny, which){//function intended to insert new posts or years when the user scrool down the screen
+    var destinyYears = $(destiny).find(".year");
+    var pileYears = $(pile).find(".year");
+    var lastUsedYear =  pileYears.index(destinyYears.length - 1);//the last year moved from pile
+    var lastMovedYear = destinyYears.last()//the last year moved to destiny
+    if(lastUsedYear.find(".post").length > lastMovedYear.find(".post").length)//test if some new post was added on the older last year of pile
+        adjustYearsVariance(lastMovedYear, lastUsedYear, which);
+    if(pileYears.length > destinyYears.length) //test if a new year was added to end of posts pile 
+        adjustPileToDestinyVariance(destiny, pile, which);   
+}
+function adjustYearsVariance(olderLastYear, newLastYear, which){
+    which? adjustYearsVarianceMiddle(olderLastYear, newLastYear) : adjustYearsVarianceRightLeft(olderLastYear, newLastYear) ;
+}
+function adjustPileToDestinyVariance(destiny,pile, which){
+    which? adjustPileToDestinyVarianceMiddle(destiny, pile) : adjustPileToDestinyVarianceRightLeft(destiny, pile);
+}
+function adjustYearsVarianceRightLeft(olderLastYear, newLastYear){
+    var lastPosts = olderLastYear.find(".post");
+    var newPosts = newLastYear.find(".post");
+    newPosts.slice(lastPosts.length).clone(true, true).each(function(index, post){
+        insertOnLeftOrRight(lastPosts.find(".left"), lastPosts.find(".right")).append(post);
+    });
+}
+function adjustPileToDestinyVarianceRightLeft(destiny, pile){
+    var lastYears = destiny.find(".year");
+    movePostsToLeftRight(pile.slice(lastYears.length), destiny);
+}
+function adjustYearsVarianceMiddle(olderLastYear, newLastYear){
+    var lastPosts = olderLastYear.find(".post");
+    var newPosts = newLastYear.find(".post");
+    newPosts.slice(lastPosts.length).clone(true, true).each(function(index, post){
+        lastPosts.find(".middle").append(post);
+    });
+}
+function adjustPileToDestinyVarianceMiddle(destiny, pile){
+    var lastYears = destiny.find(".year");
+    movePostsToMiddle(pile.slice(lastYears.length), destiny);
 }
 function addDivisor(destiny){
     $(destiny).append("<div class='divisor'></div>");
