@@ -12,6 +12,7 @@ window.onresize = function(){
 function isMiddleSize(){
     return $(window).width()<768 ? true : false;
 }
+
 function setMarginOfYears(years, minDistance){
     return years.each(function(index, year){
         setMargin(postSort(resetMargin($(year).find(".post"))), minDistance);
@@ -31,6 +32,7 @@ function incPostMargin(post, size){
     return $(post).css("margin-top", function(index, value){
         return parseInt(value) + size; 
     });
+
 }
 function postSort(posts){
     return  posts.sort(function(post, otherPost){
