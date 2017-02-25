@@ -91,3 +91,6 @@
 #menu > ul > li div{
     display: none;
 }
+.postContent{
+    width: 100%;
+}
