@@ -73,3 +73,6 @@
 #menu > ul > li div{
     display: none;
 }
+#morePosts{
+    display: none;
+}

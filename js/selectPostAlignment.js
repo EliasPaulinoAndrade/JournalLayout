@@ -64,12 +64,17 @@ function adjustPileToDestinyVarianceMiddle(destiny, pile){
 function addDivisor(destiny){
     $(destiny).append("<div class='divisor'></div>");
 }
+function addMoreButton(destiny){
+    var button = $("<div id='morePosts'>More</div>").click(moreClick);
+    $(destiny).append(button);
+}
 function resetDestiny(destiny){
     $(destiny).empty();
 }
 function setDestiny(width, which, destiny){
     addDivisor(destiny);
     which? movePostsToMiddle($("#postPile"), destiny) : movePostsToLeftRight($("#postPile"), destiny);
+    addMoreButton(destiny);
 }
 function insertOnLeftOrRight(left, right){
     return $(left).height() > $(right).height() ? right:left;

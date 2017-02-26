@@ -94,3 +94,6 @@
 .postContent{
     width: 100%;
 }
+#morePosts{
+    display: none;
+}

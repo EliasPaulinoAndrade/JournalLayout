@@ -262,3 +262,20 @@ body{
 #postPile{
     display: none;
 }
+#morePosts{
+    font-family: UbuntuMono-R;
+    color: #76647d;
+    font-weight: bold;
+    font-size: 20px;
+    margin:auto;
+    position: absolute;
+    bottom:0;
+    text-align: center;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+#morePosts:hover{
+    color:#797b8c;
+    cursor: pointer;
+}

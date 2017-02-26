@@ -145,3 +145,6 @@
     animation-name: menuDesc;
     animation-duration: 2s;
 }
+.divisor{
+    height: calc(100% - 20px);
+}
