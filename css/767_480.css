@@ -74,5 +74,6 @@
     display: none;
 }
 #morePosts{
-    display: none;
+    position: relative;
+    text-align: center;
 }

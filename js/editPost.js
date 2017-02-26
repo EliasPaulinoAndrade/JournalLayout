@@ -1,4 +1,5 @@
 $("#newPostEditor").click(function(){
+    $(window).scrollTop(0);
     if($(".postEditor").length==0){
         if($(window).width()<768){
             setOptListeners(addEditPost(createEditPost(selecPostColor()), $(".middle").first()));

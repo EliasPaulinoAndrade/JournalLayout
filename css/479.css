@@ -95,5 +95,6 @@
     width: 100%;
 }
 #morePosts{
-    display: none;
+    position: relative;
+    text-align: center;
 }
