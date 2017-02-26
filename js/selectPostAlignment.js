@@ -18,20 +18,29 @@ function movePostsToLeftRight(pile, destiny){
     });
 }
 function uploadDestiny(){
-    if(isMiddleSize() && $("#center .middle").length==0)
+    if($("#center .middle").length!=0){
+        console.log("pequeno");
         updatePostsFromDestiny($("#postPile"), $("#center"), true);
-    if(!isMiddleSize() && $("#center .middle").length!=0)
+    }
+    if($("#center .middle").length==0){
+        console.log("grande");
         updatePostsFromDestiny($("#postPile"), $("#center"), false);
+    }
 }
 function updatePostsFromDestiny(pile, destiny, which){//function intended to insert new posts or years when the user scrool down the screen
     var destinyYears = $(destiny).find(".year");
     var pileYears = $(pile).find(".year");
-    var lastUsedYear =  pileYears.index(destinyYears.length - 1);//the last year moved from pile
+    var lastUsedYear =  pileYears.get(destinyYears.length - 1);//the last year moved from pile
     var lastMovedYear = destinyYears.last()//the last year moved to destiny
-    if(lastUsedYear.find(".post").length > lastMovedYear.find(".post").length)//test if some new post was added on the older last year of pile
+    
+    if($(lastUsedYear).find(".post").length > lastMovedYear.find(".post").length){//test if some new post was added on the older last year of pile
+        console.log("yearvariance");
         adjustYearsVariance(lastMovedYear, lastUsedYear, which);
-    if(pileYears.length > destinyYears.length) //test if a new year was added to end of posts pile 
-        adjustPileToDestinyVariance(destiny, pile, which);   
+    }
+    if(pileYears.length > destinyYears.length){ //test if a new year was added to end of posts pile 
+        console.log("destivariance");
+        adjustPileToDestinyVariance(destiny, pile, which);  
+    } 
 }
 function adjustYearsVariance(olderLastYear, newLastYear, which){
     which? adjustYearsVarianceMiddle(olderLastYear, newLastYear) : adjustYearsVarianceRightLeft(olderLastYear, newLastYear) ;
@@ -40,10 +49,11 @@ function adjustPileToDestinyVariance(destiny,pile, which){
     which? adjustPileToDestinyVarianceMiddle(destiny, pile) : adjustPileToDestinyVarianceRightLeft(destiny, pile);
 }
 function adjustYearsVarianceRightLeft(olderLastYear, newLastYear){
-    var lastPosts = olderLastYear.find(".post");
-    var newPosts = newLastYear.find(".post");
+    var lastPosts = $(olderLastYear).find(".post");
+    var newPosts = $(newLastYear).find(".post");
     newPosts.slice(lastPosts.length).clone(true, true).each(function(index, post){
-        insertOnLeftOrRight(lastPosts.find(".left"), lastPosts.find(".right")).append(post);
+        console.log($(olderLastYear.find(".left")));
+        insertOnLeftOrRight(olderLastYear.find(".left"), olderLastYear.find(".right")).append(post);
     });
 }
 function adjustPileToDestinyVarianceRightLeft(destiny, pile){

@@ -23,6 +23,7 @@ body{
 .post{
     background: white;
     margin-bottom:10px; 
+    animation: postAnim 1s;
 }
 .postDay{
     display: block;
