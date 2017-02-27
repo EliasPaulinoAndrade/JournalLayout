@@ -69,9 +69,28 @@
     width: 120px;
     height: 120px;
     margin: 15px auto 15px auto; 
-    background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: center bottom; 
+    background-position: 0px 0px; 
+    background-size: 100% auto;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+#userImage:hover #userImageMark{
+    opacity: 1;
+}
+#userImageMark{
+    position:absolute;
+    display: block;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    font-family: UbuntuMono-R;
+    top:0;
+    color:white;
+    background: #373759;
+    transition: all 0.1s;
+    cursor: pointer;
 }
 #login.maleColor #userImage{
     border: 2px solid #47a1de;
@@ -168,7 +187,7 @@
     animation-iteration-count: infinite;
 }
 #title{
-    margin-bottom: 20px; 
+    margin-bottom: 20px;  
 }
 #logo{
     display: block;
@@ -183,4 +202,7 @@
     vertical-align: middle;
     transition: all 0.1s;
     padding-right:10px;
+}
+#imgUpld{
+    display: none;
 }
