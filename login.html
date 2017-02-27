@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/animations.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/colors.css" media="all">
+</head>
+<body>
+    <div id="title">
+        <img src="img/logo.png" id="logo"></img>
+        Journal
+    </div>
+    <div id="login" class="maleColor">
+        <div id="loginTop">
+            <span id="signup" class="selectedTopArea">SignUp</span>
+            <span id="signin" >SignIn</span>
+        </div>
+        <div id="loginArea">
+            <div id="signupArea">
+                <div id="userImage">
+                </div>
+                <input type="text" class="inputLogin" placeholder="Name.."/>
+                <input type="text" class="inputLogin" placeholder="Last Name.."/>
+                <input type="text" class="inputLogin" placeholder="Email.."/>
+                <div class="toggleInput">
+                    <div class="inputOption optionSelected">
+                        Male
+                    </div>
+                    <div class="inputOption"> 
+                        Female
+                    </div>
+                </div>
+                <input type="password" class="inputLogin" placeholder="Password.."/>
+                <div class="loginOption">
+                    <img src="img/newUser.png"/>
+                    <span> Register</span>
+                </div>
+            </div>
+            <div id="signinArea">
+                <input type="text" class="inputLogin" placeholder="Email.."/>
+                <input type="password" class="inputLogin" placeholder="Password.."/>
+                <div class="loginOption">
+                    <img src="img/login.png"/>
+                    <span>Login</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/loginClick.js"></script>
+</body>
+</html>
